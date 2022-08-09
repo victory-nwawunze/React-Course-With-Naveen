@@ -1,0 +1,12 @@
+/** @format */
+
+import React from "react";
+
+let Students = () => {
+  return (
+    <React.Fragment>
+      <h2>Welcome to Students Components</h2>
+    </React.Fragment>
+  );
+};
+export default Students;
