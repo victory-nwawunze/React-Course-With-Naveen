@@ -2,6 +2,7 @@
 import React, { Fragment } from "react";
 import "./App.css";
 import Counter from "./components/Counter";
+import ProductItem from "./components/ProductItem";
 import WishMessage from "./components/WishMessage";
 
 let App = () => {
@@ -13,7 +14,8 @@ let App = () => {
         </a>
       </nav>
       {/* <Counter /> */}
-      <WishMessage />
+      {/* <WishMessage /> */}
+      <ProductItem />
     </Fragment>
   );
 };
