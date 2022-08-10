@@ -1,3 +1,5 @@
+<!-- @format -->
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
@@ -68,3 +70,70 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+/\*_ @format _/
+
+//
+
+<!--
+/** @format */
+
+import React, { useState } from "react";
+
+let WishMessage = () => {
+  let [state, setState] = useState({
+    message: "Hello",
+  });
+
+  const GoodM = () => {
+    setState(() => ({
+      message: "Good Morning",
+    }));
+  };
+  let goodAfternoon = (value) => {
+    setState((state) => ({
+      message: value,
+    }));
+  };
+  return (
+    <React.Fragment>
+      <pre>{state.message}</pre>
+      <div className="container mt-3">
+        <div className="row">
+          <div className="col-md-5">
+            <div className="card">
+              <div className="card-header bg-secondary text-white">
+                <h4>WishMessage</h4>
+              </div>
+              <div className="card-body">
+                <h5 className="display-3">
+                  <h4 className="display-4">{state.message}</h4>
+                  <button onClick={GoodM} className="btn btn-success btn-sm">
+                    Good Morning
+                  </button>
+                  <button
+                    onClick={() => goodAfternoon("GoodAfternoon")}
+                    className="btn btn-warning mx-1 btn-sm"
+                  >
+                    Good Afternoon
+                  </button>
+                  <button
+                    onClick={() => {
+                      setState((state) => ({ message: "GoodEvening" }));
+                    }}
+                    className="btn btn-danger btn-sm"
+                  >
+                    Good Evening
+                  </button>
+                </h5>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </React.Fragment>
+  );
+};
+export default WishMessage;
+
+ -->
