@@ -1,6 +1,8 @@
 /** @format */
 import React, { Fragment } from "react";
 import "./App.css";
+import LoginForm from "./components/LoginForm";
+import RegisterForm from "./components/RegisterForm";
 import Username from "./components/Username";
 
 let App = () => {
@@ -11,7 +13,9 @@ let App = () => {
           React with Form Handling
         </a>
       </nav>
-      <Username />
+      {/* <Username /> */}
+      {/* <LoginForm /> */}
+      <RegisterForm />
     </Fragment>
   );
 };
