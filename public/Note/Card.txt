@@ -357,3 +357,142 @@ const LoginForm = () => {
 };
 
 export default LoginForm;
+
+
+//Register Form
+/** @format */
+
+import React from "react";
+import { useState } from "react";
+
+const RegisterForm = () => {
+  let [state, setState] = useState({
+    user: {
+      username: "",
+      email: "",
+      password: "",
+      designation: "",
+      bio: "",
+      terms: false,
+    },
+  });
+  let { user } = state;
+  const updateInput = (event) => {
+    setState((state) => ({
+      user: {
+        ...state.user,
+        [event.target.name]: event.target.value,
+      },
+    }));
+  };
+  const updateCheck = (event) => {
+    setState((state) => ({
+      user: {
+        ...state.user,
+        [event.target.name]: event.target.checked,
+      },
+    }));
+  };
+  const SubmitData = (event) => {
+    console.log(user);
+  };
+  return (
+    <React.Fragment>
+      <pre>{JSON.stringify(user)}</pre>
+      <div className="container mt-3">
+        <div className="row">
+          <div className="col-md-3">
+            <div className="card">
+              <div className="card-header bg-warning ">
+                <p className="h4">Register here</p>
+              </div>
+              <div className="card-body bg-light">
+                <form onSubmit={SubmitData}>
+                  <div className="mb-3">
+                    <input
+                      name="username"
+                      value={user.username}
+                      onChange={updateInput}
+                      type="text"
+                      className="form-control"
+                      placeholder="Username"
+                    />
+                  </div>
+                  <div className="mb-3">
+                    <input
+                      name="email"
+                      value={user.email}
+                      onChange={updateInput}
+                      type="email"
+                      className="form-control"
+                      placeholder="Email"
+                    />
+                  </div>
+                  <div className="mb-3">
+                    <input
+                      name="password"
+                      value={user.password}
+                      onChange={updateInput}
+                      type="password"
+                      className="form-control"
+                      placeholder="Password"
+                    />
+                  </div>
+                  <div className="mb-3">
+                    <select
+                      name="designation"
+                      value={user.designation}
+                      onChange={updateInput}
+                      className="form-control"
+                    >
+                      <option value="">Slect Designation</option>
+                      <option value="Software Engineer">
+                        Software Engineer
+                      </option>
+                      <option value="Sr.Software Engineer">
+                        Sr.Software Engineer
+                      </option>
+                      <option value="Tech Lead">Tech Lead</option>
+                      <option value="Project Manager">Project Manager</option>
+                      <option value="Director">Director</option>
+                    </select>
+                  </div>
+
+                  <div className="mb-3">
+                    <textarea
+                      name="bio"
+                      value={user.bio}
+                      onChange={updateInput}
+                      rows={4}
+                      className="form-control"
+                      placeholder="Bio"
+                    />
+                  </div>
+                  <div className="mb-3">
+                    <input
+                      name="terms"
+                      onChange={updateCheck}
+                      type="checkbox"
+                      className="form-check-input"
+                    />
+                    Accept Terms
+                  </div>
+                  <div className="mb-3">
+                    <input
+                      onClick={SubmitData}
+                      type="button"
+                      className="btn btn-success btn-sm"
+                      value="Register"
+                    />
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </React.Fragment>
+  );
+};
+
+export default RegisterForm;
