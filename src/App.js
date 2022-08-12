@@ -5,6 +5,7 @@ import Counter from "./components/Counter";
 import FormComponent from "./components/FormComponent";
 import SayGood from "./components/SayGood";
 import ShopingCart from "./components/ShopingCart";
+import UpdateFormInputWithText from "./components/UpdateFormInputWithText";
 
 let App = () => {
   return (
@@ -17,7 +18,8 @@ let App = () => {
       {/* <Counter /> */}
       {/* <SayGood /> */}
       {/* <ShopingCart /> */}
-      <FormComponent />
+      {/* <FormComponent /> */}
+      <UpdateFormInputWithText />
     </Fragment>
   );
 };
