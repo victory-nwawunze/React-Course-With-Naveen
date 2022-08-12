@@ -1,9 +1,10 @@
 /** @format */
 import React, { Fragment } from "react";
 import "./App.css";
-import LoginForm from "./components/LoginForm";
-import RegisterForm from "./components/RegisterForm";
-import Username from "./components/Username";
+import Counter from "./components/Counter";
+import FormComponent from "./components/FormComponent";
+import SayGood from "./components/SayGood";
+import ShopingCart from "./components/ShopingCart";
 
 let App = () => {
   return (
@@ -13,9 +14,10 @@ let App = () => {
           React with Form Handling
         </a>
       </nav>
-      {/* <Username /> */}
-      {/* <LoginForm /> */}
-      <RegisterForm />
+      {/* <Counter /> */}
+      {/* <SayGood /> */}
+      {/* <ShopingCart /> */}
+      <FormComponent />
     </Fragment>
   );
 };
