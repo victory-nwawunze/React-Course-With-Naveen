@@ -1,20 +1,17 @@
 /** @format */
 import React, { Fragment } from "react";
 import "./App.css";
-import AuthUser from "./components/AuthUser";
-
-import ProductCart from "./components/ProductCart";
+import ParentComponent from "./components/basics/ParentComponent";
 
 let App = () => {
   return (
     <Fragment>
       <nav className="navbar navbar-dark bg-dark expand-sm">
         <a href="/" className="navbar-brand">
-          React with Condition and List Rendering
+          React with Component Interaction
         </a>
       </nav>
-      {/* <AuthUser /> */}
-      <ProductCart />
+      <ParentComponent />
     </Fragment>
   );
 };
