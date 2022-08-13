@@ -1,7 +1,7 @@
 /** @format */
 import React, { Fragment } from "react";
 import "./App.css";
-import ParentComponent from "./components/basics/ParentComponent";
+import ContactApp from "./components/ContactApp";
 
 let App = () => {
   return (
@@ -11,7 +11,7 @@ let App = () => {
           React with Component Interaction
         </a>
       </nav>
-      <ParentComponent />
+      <ContactApp />
     </Fragment>
   );
 };
