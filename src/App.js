@@ -1,17 +1,17 @@
 /** @format */
 import React, { Fragment } from "react";
 import "./App.css";
-import ContactApp from "./components/ContactApp";
+import DigitalWatch from "./components/DigitalWatch";
 
 let App = () => {
   return (
     <Fragment>
       <nav className="navbar navbar-dark bg-dark expand-sm">
         <a href="/" className="navbar-brand">
-          React with Component Interaction
+          React with Component Life-Cyle Methods
         </a>
       </nav>
-      <ContactApp />
+      <DigitalWatch />
     </Fragment>
   );
 };
